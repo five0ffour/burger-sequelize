@@ -1,4 +1,5 @@
 // server.js - entry point for express web server, creates router endpoints
+require("dotenv").config();
 
 var express = require("express");
 var db = require("./models"); 
