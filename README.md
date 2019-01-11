@@ -1,5 +1,5 @@
 # "J. Wellington Wimpy's Burger App" - a full stack demo application (also known as "Eat Da Burger")  
-A burger logging application implemented with MySQL, Node, Express, Handlebars and a homemade ORM using a MVC design pattern  
+A burger logging application implemented with MySQL, Node, Express, Handlebars and Sequelize using an MVC design pattern  
   
 try it at:  https://mbg-burger-sequelize.herokuapp.com  
   
@@ -47,11 +47,13 @@ The gif provides a quick overview of the functionality (input validation checks 
    ` https://nodejs.org/en/download/`   
 2. Clone this repository into a clean diretory  
    `$ git clone <repository url>`  
-3. Bring down the latest package dependencies using node package manager  
+3. Install the sequelize-cli package
+   `npm install -g sequelize-cli`
+4. Bring down the latest package dependencies using node package manager  
    `npm install`  
-4. Download and install the latest version of mySQL  
+5. Download and install the latest version of mySQL  
    ` https://www.mysql.com/downloads/`   
-5. This package requires a database configuration and password for mySQL. The parameters are captured in a .env file which must be supplied to the root directory of the project.  Use the installation of mySQLWorkbench to configure the installation and then use your favorite IDE to enter the following keys-values pairs to the .env file with your id and password:  
+6. This package requires a database configuration and password for mySQL. The parameters are captured in a .env file which must be supplied to the root directory of the project.  Use the installation of mySQLWorkbench to configure the installation and then use your favorite IDE to enter the following keys-values pairs to the .env file with your id and password:  
   
 | File        | Parameters needed for mySQL                                          |
 | ----------- | -------------------------------------------------------------------- |
@@ -69,14 +71,16 @@ __Note:__  the .gitignore file is coded to prevent your config and password from
   
 ## Technology Used  
     
-| Package/Interface | Version     | Description                                                              |
+| Package/Interface | Version     | Description |
 | ----------------- | ----------- | ------------------------------------------------------------------------ |
-| Node.js           | __11.1.0__  | Main javascript engine for this application                              |
-| npm mySQL         | __2.16.0__  | mySQL relational database management system & workbench                  |
-| npm express       | __4.16.4__  | a node based web server framework                   |
-| npm express-handlebars| __3.0.0__  |a node based html templating framework |
-| npm dotenv        | __6.2.0__   | Utility package to hide the secret keys in a .env file and away from git |
-| mySQL Workbench   | __8.0.13__  | mySQL IDE to run schema.sql database configuration file                  | 
+| Node.js           | __11.1.0__  | Main javascript engine for this application  |
+| mysql2         | __1.6.4__  | mySQL relational database management system & workbench, compatible with sequelize |
+| express       | __4.16.4__  | a node based web server framework |
+| express-handlebars| __3.0.0__  |a node based html templating framework |
+| dotenv        | __6.2.0__   | Utility package to hide the secret keys in a .env file and away from git |
+| sequelize     | __4.42.0__ | Object Relational mapper framework |
+| sequelize-cli | __5.4.0__   | Sequelize command line interface for file generation |
+| mySQL Workbench   | __8.0.13__  | mySQL IDE to run schema.sql database configuration file | 
 | jawsDB            |             | a mySql compatible relational datbase supported for Heroku remote deployments | 
   
 ## Authors    
