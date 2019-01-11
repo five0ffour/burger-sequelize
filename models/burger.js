@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING
       },
       devoured: {
-        type: DataTypes.BOOLEAN
+        type: DataTypes.BOOLEAN,
+        defaultValue : false
       },
     });
   };
